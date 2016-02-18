@@ -1,12 +1,17 @@
 # upalatedeploy
-Deplpyment stuff for the Upalate team 
+Deployment stuff for the Upalate team 
 
 ## Steps
 
+	sudo vagrant plugin install vagrant-cahier
+
 	sudo vagrant plugin install vagrant-hostmanager
-	sudo vagrant plugin install vagrant-cachier
 
 	vagrant up
+
+The `vagrant-cachier` plugin will speed up the `vagrant up` process.
+The `vagrant-hostmanager` plugin is not strictly needed as of now, but
+will be useful as we add more boxes.
 
 ### Ancillary Commands
 
