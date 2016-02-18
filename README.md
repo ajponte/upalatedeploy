@@ -8,7 +8,9 @@ Deplpyment stuff for the Upalate team
 
 	vagrant up
 
-To see the current status of the machines, 
+### Ancillary Commands
 
-	vagrant status
+ To see the current status of the machine, `vagrant status`
+
+SSH to the machine with `vagrant ssh`
 
