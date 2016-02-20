@@ -84,10 +84,10 @@ Vagrant.configure(2) do |config|
   # config.vm.provision :shell, path: "bootstrap.sh"
   config.vm.provision "shell", inline: <<-SHELL
      sudo apt-get update
-     sudo apt-get install -y nodejs
-     sudo apt-get install -y nodejs-legacy
-     sudo apt-get install -y npm
-     sudo npm install -g bower
+  #   sudo apt-get install -y nodejs
+  #   sudo apt-get install -y nodejs-legacy
+  #   sudo apt-get install -y npm
+  #   sudo npm install -g bower
      sudo apt-get install -y python-pip
      sudo pip install flask
      sudo apt-get install -y mongodb
