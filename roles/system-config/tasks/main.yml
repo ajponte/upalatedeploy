@@ -1,0 +1,17 @@
+---
+
+- name: update apt cache
+  apt:
+    update_cache: yes
+    cache_valid_time: "{{ apt_cache_valid_time_sec }}"
+
+- name: install https transport for apt
+  apt: 
+    name: apt-transport-https
+    state: present
+
+- name: add debrepo apt repository
+  apt_repository:
+    repo: deb http://debrepo/optional precise main
+    state: present
+    update_cache: yes
