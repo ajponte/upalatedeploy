@@ -53,4 +53,8 @@ echo "Setting Timezone..."
 echo "America/Los_Angeles" | sudo tee /etc/timezon
 sudo dpkg-reconfigure --frontend noninteractive tzdata
 
+echo "Copying vagrant private key to root user..."
+mkdir -p /root/.ssh
+cat /home/vagrant/.ssh/authorized_keys >> /root/.ssh/authorized_keys
+
 SCRIPT
