@@ -83,23 +83,4 @@ Vagrant.configure(2) do |config|
   # documentation for more information about their specific syntax and use.
   # config.vm.provision :shell, path: "bootstrap.sh"
   config.vm.provision "shell", inline: <<-SHELL
-     sudo apt-get update
-     sudo apt-get install -y mongodb
-  #   sudo apt-get install -y nodejs
-  #   sudo apt-get install -y nodejs-legacy
-  #   sudo apt-get install -y npm
-  #   sudo npm install -g bower
-  #   sudo apt-get install -y nginx
-     sudo apt-get install -y gunicorn
-     sudo apt-get install -y python-pip
-     sudo apt-get install -y python-virtualenv
-  # start up the python flask app  
-     cd /vagrant/app
-     sudo virtualenv env --always-copy
-     source env/bin/activate
-     sudo pip install flask
-  # execute the next command async or vagrant up with never exit
-  #   gunicorn app:app -b 0.0.0.0:8000&
-     deactivate
-  SHELL
 end
